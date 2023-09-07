@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+    application:
+        name: register-server
+    profiles:
+        active: dev
+eureka:
+  datacenter: trmap
+  environment: product
+  server:
+      # 关闭自我保护
+      enable-self-preservation: false
+      # 清理服务器
+      eviction-interval-timer-in-ms: 5000
+  client:
+    healthcheck:
+      enabled: true
+management:
+  endpoints:
+    web:
+      base-path: /
+  health:
+    defaults:
+      enabled: false
+endpoints:
+  enabled: false
+  health:
+    enabled: true

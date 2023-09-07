@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://dev:!q2w3e4R@localhost:9500/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        serverAddr: localhost:8848
+
